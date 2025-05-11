@@ -23,6 +23,9 @@ class HandGestureController:
         )
         self.mp_draw = mp.solutions.drawing_utils
         
+        self.base_width = 640
+        self.base_height = 480
+        
         # Screen resolution for mouse control
         self.screen_width, self.screen_height = pyautogui.size()
         
@@ -145,17 +148,12 @@ class HandGestureController:
 
     # Detect hands in the frame
     def detect_hands(self, frame):
-        """Process frame and detect hands with image dimensions."""
-        # Get image dimensions
-        h, w, _ = frame.shape
-        
+        """Process frame and detect hands."""
         # Convert BGR to RGB (MediaPipe requires RGB)
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         
-        # Create ImageContent object with dimensions
-        image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
-        
         # Process the frame to find hands
+        # Removing the Image class usage that's causing issues
         results = self.hands.process(rgb_frame)
         
         return results
@@ -400,8 +398,12 @@ class HandGestureController:
         
         cap = cv2.VideoCapture(0)
         
+        # Set camera properties for calibration
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        
         # Calibration data
-        calibration_gestures = ["Point", "Open", "Pinch", "Fist", "Peace"]
+        calibration_gestures = ["Point", "Open", "Pinch", "Peace"]  # Removed "Fist" as we're not using it
         calibration_data = {}
         
         # For each gesture, collect sample data
@@ -428,8 +430,13 @@ class HandGestureController:
                 cv2.putText(frame, f"Make {gesture} gesture ({sample_count}/20)", 
                         (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
                 
-                # Process the frame
-                results = self.detect_hands(frame)
+                # Process the frame - use direct preprocessing
+                enhanced_frame, _ = self.preprocess_frame(frame)
+                
+                # Process the frame to detect hands
+                results = self.detect_hands(enhanced_frame)
+                
+                # Draw landmarks
                 frame = self.draw_landmarks(frame, results)
                 
                 if results.multi_hand_landmarks:
@@ -452,7 +459,7 @@ class HandGestureController:
             if samples:
                 calibration_data[gesture] = samples
                 print(f"Calibration data for {gesture} collected.")
-            
+        
         cv2.destroyWindow("Calibration")
         cap.release()
         
@@ -869,7 +876,6 @@ class HandGestureController:
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
         
-        
         # Offer calibration option
         print("Do you want to calibrate the system for your hand? (y/n)")
         choice = input().lower()
@@ -941,6 +947,16 @@ class HandGestureController:
             
             # Run diagnostic mode first
             self.diagnostic_mode()
+            
+            # Prompt for calibration before starting the main loop
+            print("\nDo you want to calibrate the system for your hand? (y/n)")
+            choice = input().lower()
+            if choice == 'y':
+                try:
+                    self.calibrate_hand()
+                except Exception as e:
+                    self.logger.error(f"Calibration error: {str(e)}")
+                    print(f"Error during calibration: {e}")
             
             # Main processing loop with error handling
             cap = cv2.VideoCapture(0)
@@ -1095,4 +1111,5 @@ if __name__ == "__main__":
     print("- Hold 'Pinch' for 3 seconds to enter drag mode")
     print("- Use 'Open Hand' to right-click")
     print("Press 'q' to quit")
+    # Then run the system
     controller.safe_run()  # Use safe_run with error handling
