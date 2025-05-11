@@ -1,0 +1,9 @@
+2025-05-12 02:16:54,760 - HandGestureSystem - INFO - Logging initialized
+2025-05-12 02:16:54,761 - HandGestureSystem - INFO - Starting Hand Gesture Recognition System
+2025-05-12 02:16:54,761 - HandGestureSystem - INFO - Starting diagnostic mode
+2025-05-12 02:16:55,521 - HandGestureSystem - INFO - Camera resolution: 640.0x480.0
+2025-05-12 02:16:55,945 - HandGestureSystem - INFO - MediaPipe test: Successful
+2025-05-12 02:16:55,946 - HandGestureSystem - INFO - Average frame brightness: 101.38/255
+2025-05-12 02:16:56,080 - HandGestureSystem - INFO - Frame preprocessing test: Successful
+2025-05-12 02:16:56,080 - HandGestureSystem - INFO - Skin detection: 12.83% of frame identified as skin
+2025-05-12 02:16:56,394 - HandGestureSystem - INFO - Diagnostic test completed

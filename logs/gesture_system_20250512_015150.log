@@ -1,0 +1,12 @@
+2025-05-12 01:51:50,538 - HandGestureSystem - INFO - Logging initialized
+2025-05-12 01:51:50,539 - HandGestureSystem - INFO - Starting Hand Gesture Recognition System
+2025-05-12 01:51:50,539 - HandGestureSystem - INFO - Starting diagnostic mode
+2025-05-12 01:51:51,408 - HandGestureSystem - INFO - Camera resolution: 640.0x480.0
+2025-05-12 01:51:51,874 - HandGestureSystem - INFO - MediaPipe test: Successful
+2025-05-12 01:51:51,877 - HandGestureSystem - INFO - Average frame brightness: 0.17/255
+2025-05-12 01:51:51,877 - HandGestureSystem - WARNING - Low lighting detected. This may reduce hand detection accuracy.
+2025-05-12 01:51:52,034 - HandGestureSystem - INFO - Frame preprocessing test: Successful
+2025-05-12 01:51:52,034 - HandGestureSystem - INFO - Skin detection: 0.00% of frame identified as skin
+2025-05-12 01:51:52,035 - HandGestureSystem - WARNING - Very little skin detected. Check camera positioning and lighting.
+2025-05-12 01:51:52,352 - HandGestureSystem - INFO - Diagnostic test completed
+2025-05-12 01:52:14,428 - HandGestureSystem - INFO - Virtual mouse activated

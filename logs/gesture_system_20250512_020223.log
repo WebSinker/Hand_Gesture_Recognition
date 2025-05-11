@@ -1,0 +1,21 @@
+2025-05-12 02:02:24,004 - HandGestureSystem - INFO - Logging initialized
+2025-05-12 02:02:24,005 - HandGestureSystem - INFO - Starting Hand Gesture Recognition System
+2025-05-12 02:02:24,005 - HandGestureSystem - INFO - Starting diagnostic mode
+2025-05-12 02:02:24,737 - HandGestureSystem - INFO - Camera resolution: 640.0x480.0
+2025-05-12 02:02:25,242 - HandGestureSystem - INFO - MediaPipe test: Successful
+2025-05-12 02:02:25,243 - HandGestureSystem - INFO - Average frame brightness: 139.61/255
+2025-05-12 02:02:25,367 - HandGestureSystem - INFO - Frame preprocessing test: Successful
+2025-05-12 02:02:25,377 - HandGestureSystem - INFO - Skin detection: 20.50% of frame identified as skin
+2025-05-12 02:02:25,686 - HandGestureSystem - INFO - Diagnostic test completed
+2025-05-12 02:02:46,091 - HandGestureSystem - INFO - Virtual mouse activated
+2025-05-12 02:02:48,483 - HandGestureSystem - INFO - Mouse Down
+2025-05-12 02:02:58,034 - HandGestureSystem - INFO - Right Click
+2025-05-12 02:03:00,835 - HandGestureSystem - INFO - Click
+2025-05-12 02:03:06,485 - HandGestureSystem - INFO - Mouse Down
+2025-05-12 02:03:22,921 - HandGestureSystem - INFO - Virtual mouse deactivated
+2025-05-12 02:03:30,650 - HandGestureSystem - INFO - Virtual mouse activated
+2025-05-12 02:03:38,703 - HandGestureSystem - INFO - Mouse Down
+2025-05-12 02:03:47,703 - HandGestureSystem - INFO - Mouse Down
+2025-05-12 02:03:52,509 - HandGestureSystem - INFO - Click
+2025-05-12 02:03:52,940 - HandGestureSystem - INFO - Mouse Down
+2025-05-12 02:03:55,065 - HandGestureSystem - INFO - Mouse Up

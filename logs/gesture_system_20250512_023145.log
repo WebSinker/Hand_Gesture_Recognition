@@ -1,0 +1,29 @@
+2025-05-12 02:31:45,593 - HandGestureSystem - INFO - Logging initialized
+2025-05-12 02:31:45,593 - HandGestureSystem - INFO - Starting Hand Gesture Recognition System
+2025-05-12 02:31:45,593 - HandGestureSystem - INFO - Starting diagnostic mode
+2025-05-12 02:31:46,343 - HandGestureSystem - INFO - Camera resolution: 640.0x480.0
+2025-05-12 02:31:46,717 - HandGestureSystem - INFO - MediaPipe test: Successful
+2025-05-12 02:31:46,718 - HandGestureSystem - INFO - Average frame brightness: 96.27/255
+2025-05-12 02:31:46,837 - HandGestureSystem - INFO - Frame preprocessing test: Successful
+2025-05-12 02:31:46,841 - HandGestureSystem - INFO - Skin detection: 10.95% of frame identified as skin
+2025-05-12 02:31:47,157 - HandGestureSystem - INFO - Diagnostic test completed
+2025-05-12 02:32:38,493 - HandGestureSystem - INFO - Virtual mouse activated
+2025-05-12 02:33:32,047 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:33:32,769 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:33:35,764 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:33:36,806 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:33:59,398 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:33:59,703 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:34:10,083 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:34:10,567 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:34:13,435 - HandGestureSystem - INFO - Click
+2025-05-12 02:34:22,401 - HandGestureSystem - INFO - Click
+2025-05-12 02:34:27,699 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:34:30,981 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:34:31,285 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:34:33,433 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:34:33,736 - HandGestureSystem - INFO - Mouse Up - Ending Drag
+2025-05-12 02:34:36,351 - HandGestureSystem - INFO - Click
+2025-05-12 02:34:38,778 - HandGestureSystem - INFO - Mouse Down - Starting Drag
+2025-05-12 02:34:41,468 - HandGestureSystem - INFO - Click
+2025-05-12 02:34:52,435 - HandGestureSystem - INFO - Virtual mouse deactivated
